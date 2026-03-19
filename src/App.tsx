@@ -1,8 +1,22 @@
+import { Routes, Route } from 'react-router-dom'
+import { useIsMobile } from './hooks/useIsMobile'
+import Landing from './pages/Landscape/Landing/Landing';
+
 function App() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <>
+        Hi
+      </>
+    )
+  }
+
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+    </Routes>
   )
 }
 

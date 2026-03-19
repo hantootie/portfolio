@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: hantootie/portfolio
+  branch: main
+
+media_folder: public/media
+public_folder: /media
+
+collections:
+  - name: gallery
+    label: Gallery
+    label_singular: Gallery Item
+    folder: public/content/gallery
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Description, name: description, widget: string }

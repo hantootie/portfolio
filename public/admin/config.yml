@@ -4,6 +4,7 @@ backend:
   name: github
   repo: hantootie/portfolio
   branch: main
+  base_url: https://api.sveltia.com
 
 media_folder: public/media
 public_folder: /media

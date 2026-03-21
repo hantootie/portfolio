@@ -1,5 +1,9 @@
 
 
+import freelanceIcon from '../../assets/Freelance_Icon.png';
+import animationIcon from '../../assets/Animation_Icon.png';
+import illustrationIcon from '../../assets/Illustration_Icon.png';
+
 interface WorkIconProps {
     imagePath: string
 }
@@ -16,15 +20,9 @@ const WorkIcon: React.FC<WorkIconProps> = ({ imagePath }) => {
 }
 
 const workConfigs: WorkIconProps[] = [
-    {
-        imagePath: "Freelance_Icon.png"
-    },
-    {
-        imagePath: "Animation_Icon.png"
-    },
-    {
-        imagePath: "Illustration_Icon.png"
-    }
+    { imagePath: freelanceIcon },
+    { imagePath: animationIcon },
+    { imagePath: illustrationIcon },
 ]
 
 const Work: React.FC = () => {
@@ -36,7 +34,7 @@ const Work: React.FC = () => {
             <div className="flex flex-row gap-10">
                 {
                     workConfigs.map(({ imagePath }) => (
-                        <WorkIcon imagePath={`src/assets/${imagePath}`} />
+                        <WorkIcon imagePath={imagePath} />
                     ))
                 }
             </div>

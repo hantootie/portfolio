@@ -1,8 +1,8 @@
 
 
-import freelanceIcon from '../../assets/Freelance_Icon.png';
-import animationIcon from '../../assets/Animation_Icon.png';
-import illustrationIcon from '../../assets/Illustration_Icon.png';
+import freelanceIcon from '../../../assets/Freelance_Icon.png';
+import animationIcon from '../../../assets/Animation_Icon.png';
+import illustrationIcon from '../../../assets/Illustration_Icon.png';
 
 interface WorkIconProps {
     imagePath: string

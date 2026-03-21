@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import touchMaBallOff from '../../../assets/touch_ma_ball_off.png';
 import touchMaBallOn from '../../../assets/touch_ma_ball_on.png';
+import AboutChae from './AboutChae/AboutChae';
 
 const Landing: React.FC = () => {
     const [ballSrc, setBallSrc] = useState(touchMaBallOff);
+    const [isAboutOpen, setAboutOpen] = useState(false);
 
     useEffect(() => {
         let intervalId = setInterval(() => {
@@ -14,11 +16,16 @@ const Landing: React.FC = () => {
     }, [])
 
     const handleClick = () => {
-        console.log("hi");
+        setAboutOpen(true);
+    }
+
+    const onClose = () => {
+        setAboutOpen(false);
     }
 
     return (
         <div className="flex flex-col justify-between h-full">
+            <AboutChae isOpen={isAboutOpen} onClose={onClose} />
             <div className="ml-15 mt-15 h-30 flex flex-col justify-between rock-salt-text text-3xl">
                 <div>
                     {"Hello :)"}

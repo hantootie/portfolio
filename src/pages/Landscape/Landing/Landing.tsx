@@ -1,8 +1,8 @@
 
 const Landing: React.FC = () => {
     return (
-        <div className="h-full w-full rock-salt-text text-3xl">
-            <div className="ml-25 mt-25 h-30 flex flex-col justify-between">
+        <>
+            <div className="ml-15 mt-15 h-30 flex flex-col justify-between rock-salt-text text-3xl">
                 <div>
                     {"Hello :)"}
                 </div>
@@ -10,7 +10,7 @@ const Landing: React.FC = () => {
                     Welcome to my portfolio.
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

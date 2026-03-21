@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@theme {
+  --font-rock-salt: "Rock Salt", cursive;
+  --tracking-1: 0.17em;
+}
+
+@layer components {
+  .rock-salt-text {
+    @apply font-rock-salt tracking-1;
+  }
 }
 
 html, body, #root {

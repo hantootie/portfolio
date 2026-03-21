@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import freelanceIcon from '../../../assets/Freelance_Icon.png';
 import animationIcon from '../../../assets/Animation_Icon.png';
 import illustrationIcon from '../../../assets/Illustration_Icon.png';
@@ -5,23 +6,24 @@ import FadeImage from '../../../components/FadeImage/FadeImage';
 
 interface WorkIconProps {
     imagePath: string;
+    section: string;
 }
 
-const WorkIcon: React.FC<WorkIconProps> = ({ imagePath }) => {
+const WorkIcon: React.FC<WorkIconProps> = ({ imagePath, section }) => {
     return (
-        <div className="flex-1 min-w-0">
+        <Link to={`/work-detail#${section}`} className="flex-1 min-w-0">
             <FadeImage
                 src={imagePath}
-                className="w-full h-auto"
+                className="w-full h-auto cursor-pointer hover:opacity-70 hover:-translate-y-0.25 transition-all duration-200"
             />
-        </div>
+        </Link>
     );
 };
 
 const workConfigs = [
-    { imagePath: freelanceIcon },
-    { imagePath: animationIcon },
-    { imagePath: illustrationIcon },
+    { imagePath: freelanceIcon, section: 'freelance' },
+    { imagePath: animationIcon, section: 'animation' },
+    { imagePath: illustrationIcon, section: 'illustration' },
 ];
 
 const Work: React.FC = () => {
@@ -31,8 +33,8 @@ const Work: React.FC = () => {
                 Chae's work .
             </div>
             <div className="flex flex-row gap-10">
-                {workConfigs.map(({ imagePath }) => (
-                    <WorkIcon key={imagePath} imagePath={imagePath} />
+                {workConfigs.map(({ imagePath, section }) => (
+                    <WorkIcon key={imagePath} imagePath={imagePath} section={section} />
                 ))}
             </div>
         </>

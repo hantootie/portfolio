@@ -20,12 +20,16 @@ const LandscapeLayout: React.FC = () => {
     return (
         <div className="flex flex-row h-full">
             <AboutChae />
-            <SideNav />
-            <LandscapePage>
-                <div key={location.pathname} className="animate-slide-up-fade h-full">
-                    <Outlet />
-                </div>
-            </LandscapePage>
+            <div className="fixed left-0 top-0 h-full w-1/5 z-10">
+                <SideNav />
+            </div>
+            <div className="ml-[20%] flex-1 h-full overflow-y-auto">
+                <LandscapePage>
+                    <div key={location.pathname} className="animate-slide-up-fade h-full">
+                        <Outlet />
+                    </div>
+                </LandscapePage>
+            </div>
         </div>
     );
 };

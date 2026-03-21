@@ -17,7 +17,7 @@ const SideNav: React.FC = () => {
     const { openAbout } = useAboutChae();
 
     return (
-        <div className="flex w-1/5 mb-10">
+        <div className="flex h-full">
             <div className="flex flex-col gap-15 rock-salt-text text-sm md:text-lg lg:text-xl xl:text-2xl flex-1">
                 <div className="flex justify-center">
                     <FadeImage 
@@ -30,7 +30,7 @@ const SideNav: React.FC = () => {
                 <NavButton onClick={() => navigate('/contact')}>Contact</NavButton>
                 <NavButton onClick={() => openAbout()}>About</NavButton>
             </div>
-            <div className="mt-10 w-[2.5px] bg-black rounded-full self-stretch" />
+            <div className="mt-10 mb-10 w-[2.5px] bg-black rounded-full self-stretch" />
         </div>
     )
 }

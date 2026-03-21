@@ -5,6 +5,7 @@ import Landing from './pages/Landscape/Landing/Landing';
 import Work from './pages/Landscape/Work/Work';
 import Contact from './pages/Landscape/Contact/Contact';
 import { AboutChaeProvider } from './context/AboutChaeContext';
+import WorkDetail from './pages/Landscape/WorkDetail/WorkDetail';
 
 function App() {
   const isMobile = useIsMobile();
@@ -23,6 +24,7 @@ function App() {
         <Route element={<LandscapeLayout />}>
           <Route path="/" element={<Landing />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/work-detail" element={<WorkDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

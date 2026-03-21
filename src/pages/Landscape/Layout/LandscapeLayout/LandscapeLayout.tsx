@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
+import AboutChae from '../../Landing/AboutChae/AboutChae';
 
 interface LandscapePageProps {
     children: React.ReactNode
@@ -16,6 +17,7 @@ const LandscapePage: React.FC<LandscapePageProps> = ({ children }) => {
 const LandscapeLayout: React.FC = () => {
     return (
         <div className="flex flex-row h-full">
+            <AboutChae />
             <SideNav />
             <LandscapePage>
                 <Outlet />

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import chaeLogo from '../../../../assets/Chae_logo.png';
+import { useAboutChae } from '../../../../context/AboutChaeContext';
 
 const NavButton: React.FC<{ onClick?: () => void; children: React.ReactNode }> = ({ onClick, children }) => (
     <button
@@ -12,6 +13,7 @@ const NavButton: React.FC<{ onClick?: () => void; children: React.ReactNode }> =
 
 const SideNav: React.FC = () => {
     const navigate = useNavigate();
+    const { openAbout } = useAboutChae();
 
     return (
         <div className="flex w-1/5 mb-10">
@@ -25,7 +27,7 @@ const SideNav: React.FC = () => {
                 </div>
                 <NavButton onClick={() => navigate('/work')}>Work .</NavButton>
                 <NavButton onClick={() => navigate('/contact')}>Contact</NavButton>
-                <NavButton>About</NavButton>
+                <NavButton onClick={() => openAbout()}>About</NavButton>
             </div>
             <div className="mt-10 w-[2.5px] bg-black rounded-full self-stretch" />
         </div>

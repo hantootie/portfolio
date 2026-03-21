@@ -1,11 +1,9 @@
 import aboutChae from '../../../../assets/About_Chae.png';
+import { useAboutChae } from '../../../../context/AboutChaeContext';
 
-interface AboutChaeProps {
-    isOpen: boolean;
-    onClose: () => void;
-}
+const AboutChae: React.FC = () => {
+    const { isOpen, closeAbout } = useAboutChae();
 
-const AboutChae: React.FC<AboutChaeProps> = ({ isOpen, onClose }) => {
     if (!isOpen) {
         return null;
     }
@@ -13,7 +11,7 @@ const AboutChae: React.FC<AboutChaeProps> = ({ isOpen, onClose }) => {
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
-            onClick={onClose}
+            onClick={closeAbout}
         >
             <img src={aboutChae} className="w-3/4" />
         </div>

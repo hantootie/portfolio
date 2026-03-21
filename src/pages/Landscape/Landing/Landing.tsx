@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import touchMaBallOff from '../../../assets/touch_ma_ball_off.png';
 import touchMaBallOn from '../../../assets/touch_ma_ball_on.png';
 import { useAboutChae } from '../../../context/AboutChaeContext';
+import FadeImage from '../../../components/FadeImage/FadeImage';
 
 const Landing: React.FC = () => {
     const [ballSrc, setBallSrc] = useState(touchMaBallOff);
@@ -30,22 +31,11 @@ const Landing: React.FC = () => {
                 </div>
             </div>
 
-            <div style={{ position: 'relative', display: 'inline-block' }}>
-                <img src={ballSrc} style={{ display: 'block', width: '100%' }} />
+            <div className="relative inline-block">
+                <FadeImage src={ballSrc} className="block w-full" />
                 <button
                     onClick={handleClick}
-                    style={{
-                        position: 'absolute',
-                        left: '82%',       // horizontal center of ball
-                        top: '27%',        // vertical center of ball
-                        width: '14%',       // ball diameter as % of image width
-                        aspectRatio: '1',  // keep it circular
-                        transform: 'translate(-50%, -50%)',
-                        background: 'transparent',
-                        border: 'none',
-                        borderRadius: '50%',
-                        cursor: 'pointer',
-                    }}
+                    className="absolute left-[82%] top-[27%] w-[14%] aspect-square -translate-x-1/2 -translate-y-1/2 bg-transparent border-none rounded-full cursor-pointer"
                     aria-label="Touch the ball"
                 />
             </div>

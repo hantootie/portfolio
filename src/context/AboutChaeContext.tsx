@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
+import aboutChae from '../assets/About_Chae.png';
 
 interface AboutChaeContextType {
     isOpen: boolean;
@@ -10,6 +11,12 @@ const AboutChaeContext = createContext<AboutChaeContextType | undefined>(undefin
 
 export const AboutChaeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    // Eagerly preload the image so it's cached before the modal first opens
+    useEffect(() => {
+        const img = new Image();
+        img.src = aboutChae;
+    }, []);
 
     const openAbout = () => setIsOpen(true);
     const closeAbout = () => setIsOpen(false);

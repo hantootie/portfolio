@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import chaeLogo from '../../../../assets/Chae_logo.png';
 import { useAboutChae } from '../../../../context/AboutChaeContext';
+import FadeImage from '../../../../components/FadeImage/FadeImage';
 
 const NavButton: React.FC<{ onClick?: () => void; children: React.ReactNode }> = ({ onClick, children }) => (
     <button
@@ -19,10 +20,10 @@ const SideNav: React.FC = () => {
         <div className="flex w-1/5 mb-10">
             <div className="flex flex-col gap-15 rock-salt-text text-sm md:text-lg lg:text-xl xl:text-2xl flex-1">
                 <div className="flex justify-center">
-                    <img 
+                    <FadeImage 
                         src={chaeLogo}
                         onClick={() => navigate('/')}
-                        className=" w-3/4 mt-5 cursor-pointer hover:opacity-70 hover:-translate-y-0.25"
+                        className=" w-3/4 mt-5 cursor-pointer hover:opacity-70 hover:-translate-y-0.25 aspect-[2974/1073]"
                     />
                 </div>
                 <NavButton onClick={() => navigate('/work')}>Work .</NavButton>

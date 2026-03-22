@@ -3,6 +3,7 @@ import aboutChae from '../assets/About_Chae.png';
 
 interface AboutChaeContextType {
     isOpen: boolean;
+    imageReady: boolean;
     openAbout: () => void;
     closeAbout: () => void;
 }
@@ -11,10 +12,12 @@ const AboutChaeContext = createContext<AboutChaeContextType | undefined>(undefin
 
 export const AboutChaeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [imageReady, setImageReady] = useState(false);
 
     // Eagerly preload the image so it's cached before the modal first opens
     useEffect(() => {
         const img = new Image();
+        img.onload = () => setImageReady(true);
         img.src = aboutChae;
     }, []);
 
@@ -22,7 +25,7 @@ export const AboutChaeProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     const closeAbout = () => setIsOpen(false);
 
     return (
-        <AboutChaeContext.Provider value={{ isOpen, openAbout, closeAbout }}>
+        <AboutChaeContext.Provider value={{ isOpen, imageReady, openAbout, closeAbout }}>
             {children}
         </AboutChaeContext.Provider>
     );

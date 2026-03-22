@@ -7,7 +7,7 @@ const CLOSE_DURATION_MS = 280;
 type Phase = 'hidden' | 'open' | 'closing';
 
 const AboutChae: React.FC = () => {
-    const { isOpen, closeAbout } = useAboutChae();
+    const { isOpen, imageReady, closeAbout } = useAboutChae();
     const [phase, setPhase] = useState<Phase>('hidden');
 
     useEffect(() => {
@@ -33,11 +33,13 @@ const AboutChae: React.FC = () => {
             className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 ${phase === 'closing' ? 'animate-backdrop-out' : 'animate-backdrop-in'}`}
             onClick={handleClose}
         >
-            <img
-                src={aboutChae}
-                className={`w-3/4 ${phase === 'closing' ? 'animate-shrink-to-br' : 'animate-grow-from-br'}`}
-                style={{ transformOrigin: 'bottom right' }}
-            />
+            {imageReady && (
+                <img
+                    src={aboutChae}
+                    className={`w-3/4 ${phase === 'closing' ? 'animate-shrink-to-br' : 'animate-grow-from-br'}`}
+                    style={{ transformOrigin: 'bottom right' }}
+                />
+            )}
         </div>
     );
 }

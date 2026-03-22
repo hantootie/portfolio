@@ -11,7 +11,7 @@ interface WorkIconProps {
 
 const WorkIcon: React.FC<WorkIconProps> = ({ imagePath, section }) => {
     return (
-        <Link to={`/work-detail#${section}`} className="flex-1 min-w-0">
+        <Link to={`/work/${section}`} className="flex-1 min-w-0">
             <FadeImage
                 src={imagePath}
                 className="w-full h-auto cursor-pointer hover:opacity-70 hover:-translate-y-0.25 transition-all duration-200"

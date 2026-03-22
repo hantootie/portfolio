@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useProjects } from '../../../hooks/useProjects';
+import { useParams } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import type { Project, ProjectType } from '../../../types/project';
 import FadeImage from '../../../components/FadeImage/FadeImage';
 
@@ -102,57 +101,30 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     );
 };
 
-const SECTION_CONFIG: { type: ProjectType; title: string }[] = [
-    { type: 'freelance', title: "Chae's Freelance" },
-    { type: 'animation', title: "Chae's Animations" },
-    { type: 'illustration', title: "Chae's Illustrations" },
-];
+const SECTION_TITLES: Record<ProjectType, string> = {
+    freelance: "Chae's Freelance",
+    animation: "Chae's Animations",
+    illustration: "Chae's Illustrations",
+};
 
 const WorkDetail: React.FC = () => {
-    const { hash } = useLocation();
-    const { projectsByType, loading, error } = useProjects();
+    const { type } = useParams<{ type: ProjectType }>();
+    const projects = useLoaderData() as Project[];
 
-    useEffect(() => {
-        if (hash) {
-            const el = document.querySelector(hash);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    }, [hash, loading]);
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <p className="text-xl text-gray-400">Loading projects...</p>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <p className="text-xl text-red-400">Error: {error}</p>
-            </div>
-        );
-    }
+    const title = type ? SECTION_TITLES[type] : '';
 
     return (
         <div className="flex flex-col gap-20">
-            {SECTION_CONFIG.map(({ type, title }) => (
-                <section key={type} id={type} className="min-h-screen scroll-mt-15">
-                    <h2 className="rock-salt-text text-4xl mb-10">{title}</h2>
-                    {projectsByType[type].length === 0 ? (
-                        <p className="text-gray-500 italic">No projects yet.</p>
-                    ) : (
-                        projectsByType[type].map((project) => (
-                            <ProjectCard key={project.title} project={project} />
-                        ))
-                    )}
-                </section>
-            ))}
+            <section className="min-h-screen">
+                <h2 className="rock-salt-text text-4xl mb-10">{title}</h2>
+                {projects.length === 0 ? (
+                    <p className="text-gray-500 italic">No projects yet.</p>
+                ) : (
+                    projects.map((project) => (
+                        <ProjectCard key={project.title} project={project} />
+                    ))
+                )}
+            </section>
         </div>
     );
 };

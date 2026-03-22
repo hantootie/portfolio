@@ -9,13 +9,86 @@ media_folder: public/media
 public_folder: /media
 
 collections:
-  - name: gallery
-    label: Gallery
-    label_singular: Gallery Item
-    folder: public/content/gallery
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: public/content/projects
     create: true
+    format: json
     slug: "{{slug}}"
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Image, name: image, widget: image }
-      - { label: Description, name: description, widget: string }
+      - label: Title
+        name: title
+        widget: string
+        required: true
+
+      - label: Project Type
+        name: project_type
+        widget: select
+        options:
+          - { label: Freelance, value: freelance }
+          - { label: Animation, value: animation }
+          - { label: Illustration, value: illustration }
+        required: true
+
+      - label: Banner Image
+        name: banner
+        widget: image
+        required: true
+
+      - label: Demo Type
+        name: demo_type
+        widget: select
+        options:
+          - { label: Image, value: image }
+          - { label: YouTube Video, value: youtube }
+        required: true
+
+      - label: Demo Image
+        name: demo_image
+        widget: image
+        required: false
+        condition:
+          field: demo_type
+          value: image
+
+      - label: Demo YouTube URL
+        name: demo_youtube_url
+        widget: string
+        required: false
+        condition:
+          field: demo_type
+          value: youtube
+
+      - label: Description
+        name: description
+        widget: text
+        required: true
+
+      - label: Concept Illustrations
+        name: concept_illustrations
+        widget: list
+        required: false
+        fields:
+          - label: Image
+            name: image
+            widget: image
+            required: true
+          - label: Caption
+            name: caption
+            widget: string
+            required: false
+
+      - label: Storyboard
+        name: storyboard
+        widget: list
+        required: false
+        fields:
+          - label: Image
+            name: image
+            widget: image
+            required: true
+          - label: Caption
+            name: caption
+            widget: string
+            required: false

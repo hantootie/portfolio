@@ -18,7 +18,7 @@ const SideNav: React.FC = () => {
 
     return (
         <div className="flex h-full">
-            <div className="flex flex-col gap-15 rock-salt-text text-sm md:text-lg lg:text-xl xl:text-2xl flex-1">
+            <div className="flex flex-col gap-15 rock-salt-text sm:text-2xl xl:text-4xl flex-1">
                 <div className="flex justify-center">
                     <FadeImage 
                         src={chaeLogo}

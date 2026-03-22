@@ -25,23 +25,19 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         : null;
 
     return (
-        <div className="mb-16 p-6 rounded-2xl bg-white/5 border border-white/10">
+        <div className="mb-16 rounded-2xl bg-white/5 border border-white/10">
             {/* Banner */}
             <FadeImage
                 src={project.banner}
                 alt={`${project.title} banner`}
-                className="w-full h-64 object-cover rounded-xl mb-6"
+                className="w-full h-64 object-cover rounded-lg mb-6"
             />
 
             {/* Title */}
-            <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-
-            {/* Description */}
-            <p className="mb-6 text-gray-300 whitespace-pre-line">{project.description}</p>
+            <h3 className="text-2xl font-bold mb-4 rock-salt-text">{project.title}</h3>
 
             {/* Demo */}
-            <div className="mb-8">
-                <h4 className="text-lg font-semibold mb-3 text-gray-200">Project Demo</h4>
+            <div className="mb-8 flex flex-row gap-10">
                 {project.demo_type === 'image' && project.demo_image ? (
                     <FadeImage
                         src={project.demo_image}
@@ -49,7 +45,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                         className="w-full max-h-[500px] object-contain rounded-lg"
                     />
                 ) : youtubeId ? (
-                    <div className="relative w-full aspect-video">
+                    <div className="relative w-3/5 aspect-video">
                         <iframe
                             src={`https://www.youtube.com/embed/${youtubeId}`}
                             title={`${project.title} demo`}
@@ -59,12 +55,15 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                         />
                     </div>
                 ) : null}
+
+                {/* Description */}
+                <p className="w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
             </div>
 
             {/* Concept Illustrations */}
             {project.concept_illustrations && project.concept_illustrations.length > 0 && (
                 <div className="mb-8">
-                    <h4 className="text-lg font-semibold mb-3 text-gray-200">Concept Illustrations</h4>
+                    <h4 className="text-lg rock-salt-text pb-2">Concept Art</h4>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {project.concept_illustrations.map((item, i) => (
                             <div key={i} className="flex flex-col">
@@ -73,9 +72,6 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                                     alt={item.caption || `Concept ${i + 1}`}
                                     className="w-full h-48 object-cover rounded-lg"
                                 />
-                                {item.caption && (
-                                    <span className="text-sm text-gray-400 mt-1 text-center">{item.caption}</span>
-                                )}
                             </div>
                         ))}
                     </div>
@@ -85,7 +81,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {/* Storyboard */}
             {project.storyboard && project.storyboard.length > 0 && (
                 <div className="mb-4">
-                    <h4 className="text-lg font-semibold mb-3 text-gray-200">Storyboard</h4>
+                    <h4 className="text-lg rock-salt-text pb-2">Storyboard</h4>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                         {project.storyboard.map((item, i) => (
                             <div key={i} className="flex flex-col">

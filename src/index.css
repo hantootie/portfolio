@@ -2,12 +2,16 @@
 
 @theme {
   --font-rock-salt: "Rock Salt", cursive;
+  --font-schoolbell: "Schoolbell", cursive;
   --tracking-1: 0.17em;
 }
 
 @layer components {
   .rock-salt-text {
-    @apply font-rock-salt tracking-1;
+    @apply font-schoolbell
+  }
+  .schoolbell-text {
+    @apply font-schoolbell
   }
 }
 
@@ -91,8 +95,3 @@ html, body, #root {
 .animate-backdrop-out {
   animation: backdropFadeOut 0.28s ease forwards;
 }
-
-/* ── Work icon stagger delays ── */
-.stagger-1 { animation-delay: 0.05s; }
-.stagger-2 { animation-delay: 0.15s; }
-.stagger-3 { animation-delay: 0.25s; }

@@ -1,0 +1,21 @@
+{
+  "title": "Climb",
+  "project_type": "animation",
+  "banner": "/media/Climb_Banner.png",
+  "demo_type": "youtube",
+  "demo_image": "",
+  "demo_youtube_url": "https://www.youtube.com/watch?v=BDcFsgQj8aw",
+  "description": "This is my climb animation! Featuring woojoo climbing :)",
+  "concept_illustrations": [
+    {
+      "image": "/media/cooking.png",
+      "caption": ""
+    }
+  ],
+  "storyboard": [
+    {
+      "image": "/media/deepfried_1770928382364.jpg",
+      "caption": ""
+    }
+  ]
+}

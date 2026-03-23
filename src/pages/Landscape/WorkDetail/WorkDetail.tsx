@@ -26,7 +26,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         : null;
 
     return (
-        <div id={slugify(project.title)} className="mb-16 rounded-2xl bg-white/5 border border-white/10">
+        <div id={slugify(project.title)} className="mb-16 rounded-2xl bg-white/5 border border-white/10 scroll-mt-10">
             {/* Banner */}
             <FadeImage
                 src={project.banner}

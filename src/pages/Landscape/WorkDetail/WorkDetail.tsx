@@ -65,36 +65,31 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {project.storyboard && project.storyboard.length > 0 && (
                 <div className="mb-4">
                     <h4 className="text-lg rock-salt-text pb-2">Storyboard</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="flex flex-row flex-wrap gap-1">
                         {project.storyboard.map((item, i) => (
-                            <div key={i} className="flex flex-col">
-                                <FadeImage
-                                    src={item.image}
-                                    alt={item.caption || `Storyboard ${i + 1}`}
-                                    className="w-full h-48 object-cover rounded-lg"
-                                />
-                                {item.caption && (
-                                    <span className="text-sm text-gray-400 mt-1 text-center">{item.caption}</span>
-                                )}
-                            </div>
+                            <FadeImage
+                                key={i}
+                                src={item.image}
+                                alt={item.caption || `Storyboard ${i + 1}`}
+                                className="w-9/30 h-full"
+                            />
                         ))}
                     </div>
                 </div>
             )}
 
-                        {/* Concept Illustrations */}
+            {/* Concept Illustrations */}
             {project.concept_illustrations && project.concept_illustrations.length > 0 && (
                 <div className="mb-8">
-                    <h4 className="text-lg rock-salt-text pb-2">Concept Art</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <h4 className="text-lg rock-salt-text pb-2">Illustrations</h4>
+                    <div className="flex flex-row flex-wrap gap-1">
                         {project.concept_illustrations.map((item, i) => (
-                            <div key={i} className="flex flex-col">
-                                <FadeImage
-                                    src={item.image}
-                                    alt={item.caption || `Concept ${i + 1}`}
-                                    className="w-full h-48 object-cover rounded-lg"
-                                />
-                            </div>
+                            <FadeImage
+                                key={i}
+                                src={item.image}
+                                alt={item.caption || `Concept ${i + 1}`}
+                                className="w-9/30 h-full"
+                            />
                         ))}
                     </div>
                 </div>

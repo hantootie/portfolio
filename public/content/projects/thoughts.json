@@ -1,0 +1,40 @@
+{
+  "title": "Thoughts",
+  "project_type": "animation",
+  "banner": "/media/Thoughts_Banner.png",
+  "demo_type": "youtube",
+  "demo_image": "",
+  "demo_youtube_url": "https://www.youtube.com/watch?v=7SpTnvJaVB4",
+  "description": "These are all my wonderful happy thoughts :P",
+  "concept_illustrations": [],
+  "storyboard": [
+    {
+      "image": "/media/story thumb nail.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/1 storyboard.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/2 storyboard.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/3 storyboard.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/4 storyboard.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/5 storyboard.PNG",
+      "caption": ""
+    },
+    {
+      "image": "/media/6 storyboard.PNG",
+      "caption": ""
+    }
+  ]
+}

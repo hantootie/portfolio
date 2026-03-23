@@ -5,12 +5,13 @@ import Landing from './pages/Landscape/Landing/Landing';
 import Work from './pages/Landscape/Work/Work';
 import Contact from './pages/Landscape/Contact/Contact';
 import { AboutChaeProvider } from './context/AboutChaeContext';
+import { WorkDetailProvider } from './context/WorkDetailContext';
 import WorkDetail from './pages/Landscape/WorkDetail/WorkDetail';
 import { projectsLoader } from './loaders/projectsLoader';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<AboutChaeProvider><LandscapeLayout /></AboutChaeProvider>}>
+    <Route element={<AboutChaeProvider><WorkDetailProvider><LandscapeLayout /></WorkDetailProvider></AboutChaeProvider>}>
       <Route path="/" element={<Landing />} />
       <Route path="/work" element={<Work />} />
       <Route

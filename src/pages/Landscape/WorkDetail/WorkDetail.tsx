@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom';
 import type { Project, ProjectType } from '../../../types/project';
 import FadeImage from '../../../components/FadeImage/FadeImage';
+import { useWorkDetail, slugify } from '../../../context/WorkDetailContext';
 
 function extractYouTubeId(url: string): string | null {
     try {
@@ -24,7 +26,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         : null;
 
     return (
-        <div className="mb-16 rounded-2xl bg-white/5 border border-white/10">
+        <div id={slugify(project.title)} className="mb-16 rounded-2xl bg-white/5 border border-white/10">
             {/* Banner */}
             <FadeImage
                 src={project.banner}
@@ -110,8 +112,14 @@ const SECTION_TITLES: Record<ProjectType, string> = {
 const WorkDetail: React.FC = () => {
     const { type } = useParams<{ type: ProjectType }>();
     const projects = useLoaderData() as Project[];
+    const { setProjectTitles } = useWorkDetail();
 
     const title = type ? SECTION_TITLES[type] : '';
+
+    useEffect(() => {
+        setProjectTitles(projects.map((p) => p.title));
+        return () => setProjectTitles([]);
+    }, [projects]);
 
     return (
         <div className="flex flex-col gap-20">

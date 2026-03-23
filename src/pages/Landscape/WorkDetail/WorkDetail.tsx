@@ -61,24 +61,6 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 <p className="w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
             </div>
 
-            {/* Concept Illustrations */}
-            {project.concept_illustrations && project.concept_illustrations.length > 0 && (
-                <div className="mb-8">
-                    <h4 className="text-lg rock-salt-text pb-2">Concept Art</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {project.concept_illustrations.map((item, i) => (
-                            <div key={i} className="flex flex-col">
-                                <FadeImage
-                                    src={item.image}
-                                    alt={item.caption || `Concept ${i + 1}`}
-                                    className="w-full h-48 object-cover rounded-lg"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-
             {/* Storyboard */}
             {project.storyboard && project.storyboard.length > 0 && (
                 <div className="mb-4">
@@ -94,6 +76,24 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                                 {item.caption && (
                                     <span className="text-sm text-gray-400 mt-1 text-center">{item.caption}</span>
                                 )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+                        {/* Concept Illustrations */}
+            {project.concept_illustrations && project.concept_illustrations.length > 0 && (
+                <div className="mb-8">
+                    <h4 className="text-lg rock-salt-text pb-2">Concept Art</h4>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {project.concept_illustrations.map((item, i) => (
+                            <div key={i} className="flex flex-col">
+                                <FadeImage
+                                    src={item.image}
+                                    alt={item.caption || `Concept ${i + 1}`}
+                                    className="w-full h-48 object-cover rounded-lg"
+                                />
                             </div>
                         ))}
                     </div>

@@ -74,9 +74,14 @@ collections:
             name: image
             widget: image
             required: true
-          - label: Caption
-            name: caption
-            widget: string
+          - label: Column Span
+            name: col_span
+            widget: select
+            options:
+              - { label: "1 Column", value: 1 }
+              - { label: "2 Columns", value: 2 }
+              - { label: "3 Columns", value: 3 }
+            default: 1
             required: false
 
       - label: Storyboard
@@ -88,7 +93,12 @@ collections:
             name: image
             widget: image
             required: true
-          - label: Caption
-            name: caption
-            widget: string
+          - label: Column Span
+            name: col_span
+            widget: select
+            options:
+              - { label: "1 Column", value: 1 }
+              - { label: "2 Columns", value: 2 }
+              - { label: "3 Columns", value: 3 }
+            default: 1
             required: false

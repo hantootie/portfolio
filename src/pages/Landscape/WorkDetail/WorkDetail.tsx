@@ -65,13 +65,17 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {project.storyboard && project.storyboard.length > 0 && (
                 <div className="mb-4">
                     <h4 className="text-lg rock-salt-text pb-2">Storyboard</h4>
-                    <div className="flex flex-row flex-wrap gap-1">
+                    <div className="grid grid-cols-3 gap-1">
                         {project.storyboard.map((item, i) => (
                             <FadeImage
                                 key={i}
                                 src={item.image}
-                                alt={item.caption || `Storyboard ${i + 1}`}
-                                className="w-9/30 h-full"
+                                alt={`Storyboard ${i + 1}`}
+                                className={`w-full h-full object-cover ${
+                                    item.col_span === 3 ? 'col-span-3' :
+                                    item.col_span === 2 ? 'col-span-2' :
+                                    'col-span-1'
+                                }`}
                             />
                         ))}
                     </div>
@@ -82,13 +86,17 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {project.concept_illustrations && project.concept_illustrations.length > 0 && (
                 <div className="mb-8">
                     <h4 className="text-lg rock-salt-text pb-2">Illustrations</h4>
-                    <div className="flex flex-row flex-wrap gap-1">
+                    <div className="grid grid-cols-3 gap-1">
                         {project.concept_illustrations.map((item, i) => (
                             <FadeImage
                                 key={i}
                                 src={item.image}
-                                alt={item.caption || `Concept ${i + 1}`}
-                                className="w-9/30 h-full"
+                                alt={`Concept ${i + 1}`}
+                                className={`w-full h-full object-cover ${
+                                    item.col_span === 3 ? 'col-span-3' :
+                                    item.col_span === 2 ? 'col-span-2' :
+                                    'col-span-1'
+                                }`}
                             />
                         ))}
                     </div>

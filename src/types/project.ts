@@ -2,7 +2,7 @@ export type ProjectType = 'freelance' | 'animation' | 'illustration';
 
 export interface ProjectImage {
   image: string;
-  caption?: string;
+  col_span?: 1 | 2 | 3;
 }
 
 export interface Project {

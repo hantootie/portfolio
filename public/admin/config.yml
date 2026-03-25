@@ -20,7 +20,7 @@ collections:
       - label: Title
         name: title
         widget: string
-        required: true
+        required: false
 
       - label: Project Type
         name: project_type
@@ -29,12 +29,16 @@ collections:
           - { label: Freelance, value: freelance }
           - { label: Animation, value: animation }
           - { label: Illustration, value: illustration }
+          - { label: Design, value: design }
+          - { label: Storyboard, value: storyboard }
+          - { label: Resume, value: resume }
+
         required: true
 
       - label: Banner Image
         name: banner
         widget: image
-        required: true
+        required: false
 
       - label: Demo Type
         name: demo_type
@@ -42,7 +46,7 @@ collections:
         options:
           - { label: Image, value: image }
           - { label: YouTube Video, value: youtube }
-        required: true
+        required: false
 
       - label: Demo Image
         name: demo_image
@@ -63,7 +67,7 @@ collections:
       - label: Description
         name: description
         widget: text
-        required: true
+        required: false
 
       - label: Concept Illustrations
         name: concept_illustrations
@@ -102,3 +106,11 @@ collections:
               - { label: "3 Columns", value: 3 }
             default: 1
             required: false
+
+      - label: Resume PDF
+        name: resume_pdf
+        widget: file
+        required: false
+        condition:
+          field: project_type
+          value: resume

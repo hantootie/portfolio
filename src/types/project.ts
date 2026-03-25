@@ -1,4 +1,4 @@
-export type ProjectType = 'freelance' | 'animation' | 'illustration';
+export type ProjectType = 'freelance' | 'animation' | 'illustration' | 'design' | 'storyboard' | 'resume';
 
 export interface ProjectImage {
   image: string;
@@ -6,15 +6,16 @@ export interface ProjectImage {
 }
 
 export interface Project {
-  title: string;
+  title?: string;
   project_type: ProjectType;
-  banner: string;
-  demo_type: 'image' | 'youtube';
+  banner?: string;
+  demo_type?: 'image' | 'youtube';
   demo_image?: string;
   demo_youtube_url?: string;
-  description: string;
+  description?: string;
   concept_illustrations?: ProjectImage[];
   storyboard?: ProjectImage[];
+  resume_pdf?: string;
 }
 
 export type ProjectsByType = Record<ProjectType, Project[]>;

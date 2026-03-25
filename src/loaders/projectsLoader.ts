@@ -1,7 +1,7 @@
 import type { LoaderFunctionArgs } from 'react-router-dom';
 import type { Project, ProjectType } from '../types/project';
 
-const VALID_TYPES: ProjectType[] = ['freelance', 'animation', 'illustration'];
+const VALID_TYPES: ProjectType[] = ['freelance', 'animation', 'illustration', 'design', 'storyboard', 'resume'];
 
 export async function projectsLoader({ params }: LoaderFunctionArgs): Promise<Project[]> {
   const type = params.type as ProjectType;

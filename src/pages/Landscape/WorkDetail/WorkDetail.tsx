@@ -25,41 +25,51 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         ? extractYouTubeId(project.demo_youtube_url)
         : null;
 
+    const hasDemo = (project.demo_type === 'image' && project.demo_image) || youtubeId;
+
     return (
-        <div id={slugify(project.title)} className="mb-16 rounded-2xl bg-white/5 border border-white/10 scroll-mt-10">
+        <div id={project.title ? slugify(project.title) : undefined} className="mb-16 rounded-2xl bg-white/5 border border-white/10 scroll-mt-10">
             {/* Banner */}
-            <FadeImage
-                src={project.banner}
-                alt={`${project.title} banner`}
-                className="w-full h-64 object-cover rounded-lg mb-6"
-            />
-
+            { project.banner && 
+                <FadeImage
+                    src={project.banner}
+                    alt={`${project.title ?? ''} banner`}
+                    className="w-full h-64 object-cover rounded-lg mb-6"
+                />
+            }
+            
             {/* Title */}
-            <h3 className="text-2xl font-bold mb-4 rock-salt-text">{project.title}</h3>
+            {project.title && (
+                <h3 className="text-2xl font-bold mb-4 rock-salt-text">{project.title}</h3>
+            )}
 
-            {/* Demo */}
-            <div className="mb-8 flex flex-row gap-10">
-                {project.demo_type === 'image' && project.demo_image ? (
-                    <FadeImage
-                        src={project.demo_image}
-                        alt={`${project.title} demo`}
-                        className="w-full max-h-[500px] object-contain rounded-lg"
-                    />
-                ) : youtubeId ? (
-                    <div className="relative w-3/5 aspect-video">
-                        <iframe
-                            src={`https://www.youtube.com/embed/${youtubeId}`}
-                            title={`${project.title} demo`}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="w-full h-full rounded-lg"
+            {/* Demo + Description */}
+            {(hasDemo || project.description) && (
+                <div className="mb-8 flex flex-row gap-10">
+                    {project.demo_type === 'image' && project.demo_image ? (
+                        <FadeImage
+                            src={project.demo_image}
+                            alt={`${project.title ?? ''} demo`}
+                            className="w-full max-h-[500px] object-contain rounded-lg"
                         />
-                    </div>
-                ) : null}
+                    ) : youtubeId ? (
+                        <div className="relative w-3/5 aspect-video">
+                            <iframe
+                                src={`https://www.youtube.com/embed/${youtubeId}`}
+                                title={`${project.title ?? ''} demo`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="w-full h-full rounded-lg"
+                            />
+                        </div>
+                    ) : null}
 
-                {/* Description */}
-                <p className="w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
-            </div>
+                    {/* Description */}
+                    {project.description && (
+                        <p className="w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
+                    )}
+                </div>
+            )}
 
             {/* Storyboard */}
             {project.storyboard && project.storyboard.length > 0 && (
@@ -78,6 +88,28 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                                 }`}
                             />
                         ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Resume PDF */}
+            {project.resume_pdf && (
+                <div>
+                    <iframe
+                        src={project.resume_pdf}
+                        title="Resume"
+                        className="w-full rounded-lg"
+                        style={{ height: '147vh' }}
+                    />
+                    <div className="flex items-center justify-between pb-2">
+                        <a
+                            href={project.resume_pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="schoolbell-text text-sm underline opacity-70 hover:opacity-100 transition-opacity"
+                        >
+                            Download PDF
+                        </a>
                     </div>
                 </div>
             )}
@@ -110,6 +142,9 @@ const SECTION_TITLES: Record<ProjectType, string> = {
     freelance: "Chae's Freelance",
     animation: "Chae's Animations",
     illustration: "Chae's Illustrations",
+    design: "Chae's Design",
+    storyboard: "Chae's Storyboards",
+    resume: "Chae's Resume",
 };
 
 const WorkDetail: React.FC = () => {
@@ -120,7 +155,7 @@ const WorkDetail: React.FC = () => {
     const title = type ? SECTION_TITLES[type] : '';
 
     useEffect(() => {
-        setProjectTitles(projects.map((p) => p.title));
+        setProjectTitles(projects.map((p) => p.title).filter((t): t is string => !!t));
         return () => setProjectTitles([]);
     }, [projects]);
 

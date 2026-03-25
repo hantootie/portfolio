@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import freelanceIcon from '../../../assets/Freelance_Icon.png';
 import animationIcon from '../../../assets/Animation_Icon.png';
 import illustrationIcon from '../../../assets/Illustration_Icon.png';
+import designIcon from '../../../assets/Design_Icon.png';
+import resumeIcon from '../../../assets/Resume_Ans_CV_Icon.png';
+import storyboardIcon from '../../../assets/Storyboard_Icon.png';
+
 import FadeImage from '../../../components/FadeImage/FadeImage';
 
 interface WorkIconProps {
@@ -24,6 +28,9 @@ const workConfigs = [
     { imagePath: freelanceIcon, section: 'freelance' },
     { imagePath: animationIcon, section: 'animation' },
     { imagePath: illustrationIcon, section: 'illustration' },
+    { imagePath: designIcon, section: 'design' },
+    { imagePath: storyboardIcon, section: 'storyboard' },
+    { imagePath: resumeIcon, section: 'resume' },
 ];
 
 const Work: React.FC = () => {
@@ -32,7 +39,7 @@ const Work: React.FC = () => {
             <div className='rock-salt-text text-5xl mb-10 opacity-0 animate-slide-up-fade'>
                 Chae's work .
             </div>
-            <div className="flex flex-row gap-10">
+            <div className="grid grid-cols-3 gap-5 w-[80%]">
                 {workConfigs.map(({ imagePath, section }) => (
                     <WorkIcon key={imagePath} imagePath={imagePath} section={section} />
                 ))}

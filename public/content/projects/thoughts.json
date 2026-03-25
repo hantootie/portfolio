@@ -10,6 +10,7 @@
   "storyboard": [
     {
       "image": "/media/story thumb nail.PNG",
+      "col_span": 3,
       "caption": ""
     },
     {

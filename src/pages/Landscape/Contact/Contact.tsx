@@ -24,10 +24,10 @@ const contactIcons = [
 const Contact: React.FC = () => {
     return (
         <div className="rock-salt-text">
-            <div className="text-5xl mb-10">
+            <div className="text-2xl md:text-5xl mb-5 md:mb-10">
                 Contact
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                 {
                     contactIcons.map((contactIcon) => (
                         <div >

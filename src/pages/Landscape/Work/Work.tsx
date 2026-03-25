@@ -36,10 +36,10 @@ const workConfigs = [
 const Work: React.FC = () => {
     return (
         <>
-            <div className='rock-salt-text text-5xl mb-10 opacity-0 animate-slide-up-fade'>
+            <div className='rock-salt-text text-3xl md:text-5xl mb-3 md:mb-10 opacity-0 animate-slide-up-fade'>
                 Chae's work .
             </div>
-            <div className="grid grid-cols-3 gap-5 w-[80%]">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-full md:w-[80%]">
                 {workConfigs.map(({ imagePath, section }) => (
                     <WorkIcon key={imagePath} imagePath={imagePath} section={section} />
                 ))}

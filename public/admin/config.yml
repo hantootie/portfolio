@@ -4,6 +4,7 @@ backend:
   name: github
   repo: hantootie/portfolio
   branch: main
+  base_url: https://sveltia-cms-auth.hantootie.workers.dev
 
 media_folder: public/media
 public_folder: /media

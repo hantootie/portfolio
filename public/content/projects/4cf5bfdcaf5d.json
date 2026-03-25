@@ -2,12 +2,17 @@
   "title": "OCAD U Climbing",
   "order": 3,
   "project_type": "freelance",
-  "banner": "/media/climbing shirt.png",
+  "banner": "/media/Ocad_U_Climb_Banner.png",
   "demo_type": "image",
-  "demo_image": "",
+  "demo_image": "/media/pasted-image-1774482028780.png",
   "demo_youtube_url": "",
-  "description": "",
-  "concept_illustrations": [],
+  "description": "In my role as a merchandise designer for the OCAD U Climbing club, I created a custom shirt sponsored by Ozzy’s Burgers that captures the local climbing community through a map-style illustration. The design connects three key landmarks—Ozzy’s Burger shop, OCAD University, and Basecamp Climbing Gym—by recreating their physical structures into a unified visual narrative. To maintain the identity of each location, I reimagined the iconic architecture of OCAD U and Basecamp by translating their specific symbols and building styles into custom illustrations, blending branding with environmental storytelling.",
+  "concept_illustrations": [
+    {
+      "image": "/media/제목_없는_아트워크 150.png",
+      "col_span": 3
+    }
+  ],
   "storyboard": [],
   "resume_pdf": ""
 }

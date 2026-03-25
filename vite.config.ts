@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import projectManifestPlugin from './vite-plugin-project-manifest'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), projectManifestPlugin()],
+  plugins: [react(), tailwindcss(), projectManifestPlugin(), cloudflare()],
 })

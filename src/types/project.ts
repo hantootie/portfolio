@@ -7,6 +7,7 @@ export interface ProjectImage {
 
 export interface Project {
   title?: string;
+  order?: number;
   project_type: ProjectType;
   banner?: string;
   demo_type?: 'image' | 'youtube';

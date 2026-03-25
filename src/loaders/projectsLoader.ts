@@ -28,5 +28,12 @@ export async function projectsLoader({ params }: LoaderFunctionArgs): Promise<Pr
     (p): p is Project => p !== null
   );
 
-  return projects.filter((p) => p.project_type === type);
+  return projects
+    .filter((p) => p.project_type === type)
+    .sort((a, b) => {
+      if (a.order == null && b.order == null) return 0;
+      if (a.order == null) return 1;
+      if (b.order == null) return -1;
+      return a.order - b.order;
+    });
 }

@@ -23,6 +23,14 @@ collections:
         widget: string
         required: false
 
+      - label: Order
+        name: order
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+        hint: "Controls display order within the same project type. Lower numbers appear first."
+
       - label: Project Type
         name: project_type
         widget: select

@@ -1,0 +1,42 @@
+{
+  "title": "Solution Cimbing",
+  "order": 2,
+  "project_type": "freelance",
+  "banner": "/media/Solu_Banner.png",
+  "demo_type": "image",
+  "demo_image": "/media/pasted-image-1774475399524.png",
+  "demo_youtube_url": "",
+  "description": "In my role as a merchandise designer for Solution Climbing, I came up with a custom t-shirt design for their upcoming events that centered on personifying the company’s signature climbing volumes. By turning these volumes into unique characters to highlight their core product line, I eventually expanded the concept into a full logo reimagination—incorporating various climbing holds and technical equipment to represent the brand’s identity.",
+  "concept_illustrations": [
+    {
+      "image": "/media/IMG_4411.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4412.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4410.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4406.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4407.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4408.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4409.PNG",
+      "col_span": 3
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

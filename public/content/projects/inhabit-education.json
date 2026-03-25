@@ -7,7 +7,24 @@
   "demo_image": "/media/This_Is_My_Room_1 4.png",
   "demo_youtube_url": "",
   "description": "From December 2025 to March 2026, I served as a freelance illustrator for the Read Aloud Collection, creating original illustrations for four educational stories, \"This is my room!, Making a dance, Right to learn about our culture, and Sharing our stories\" commissioned by Inhabit Education and the Government of Nunavut for their educational purposes.",
-  "concept_illustrations": [],
+  "concept_illustrations": [
+    {
+      "image": "/media/제목_없는_아트워크 146.png",
+      "col_span": 3
+    },
+    {
+      "image": "/media/제목_없는_아트워크 147.png",
+      "col_span": 3
+    },
+    {
+      "image": "/media/제목_없는_아트워크 148.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 149.png",
+      "col_span": 1
+    }
+  ],
   "storyboard": [],
   "resume_pdf": ""
 }

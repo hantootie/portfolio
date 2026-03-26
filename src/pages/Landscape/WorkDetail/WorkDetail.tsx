@@ -34,26 +34,26 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 <FadeImage
                     src={project.banner}
                     alt={`${project.title ?? ''} banner`}
-                    className="w-full h-64 object-cover rounded-lg mb-6"
+                    className="w-full h-full object-cover rounded-md mb-6"
                 />
             }
             
             {/* Title */}
             {project.title && (
-                <h3 className="text-2xl font-bold mb-4 rock-salt-text">{project.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 rock-salt-text">{project.title}</h3>
             )}
 
             {/* Demo + Description */}
             {(hasDemo || project.description) && (
-                <div className="mb-8 flex flex-row gap-10">
+                <div className="mb-8 flex flex-col md:flex-row gap-10 items-center">
                     {project.demo_type === 'image' && project.demo_image ? (
                         <FadeImage
                             src={project.demo_image}
                             alt={`${project.title ?? ''} demo`}
-                            className="w-full max-h-[500px] object-contain rounded-lg"
+                            className="w-full md:w-3/5 object-contain rounded-md"
                         />
                     ) : youtubeId ? (
-                        <div className="relative w-3/5 aspect-video">
+                        <div className="relative w-full md:w-3/5 aspect-video">
                             <iframe
                                 src={`https://www.youtube.com/embed/${youtubeId}`}
                                 title={`${project.title ?? ''} demo`}
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
                     {/* Description */}
                     {project.description && (
-                        <p className="w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
+                        <p className="w-full md:w-2/5 mb-6 whitespace-pre-line schoolbell-text text-xl">{project.description}</p>
                     )}
                 </div>
             )}
@@ -96,11 +96,12 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {project.resume_pdf && (
                 <div>
                     <iframe
-                        src={project.resume_pdf}
+                        src={`${project.resume_pdf}#toolbar=0&navpanes=0&scrollbar=0`}
                         title="Resume"
-                        className="w-full rounded-lg"
-                        style={{ height: '147vh' }}
+                        className="w-full object-contain rounded-md mb-5"
+                        style={{ aspectRatio: '8.5 / 11' }}
                     />
+
                     <div className="flex items-center justify-between pb-2">
                         <a
                             href={project.resume_pdf}
@@ -162,7 +163,7 @@ const WorkDetail: React.FC = () => {
     return (
         <div className="flex flex-col gap-20">
             <section className="min-h-screen">
-                <h2 className="rock-salt-text text-4xl mb-10">{title}</h2>
+                <h2 className="rock-salt-text text-2xl md:text-4xl mb-5 md:mb-10">{title}</h2>
                 {projects.length === 0 ? (
                     <p className="text-gray-500 italic">No projects yet.</p>
                 ) : (

@@ -1,0 +1,22 @@
+{
+  "title": "Ozzy's Burgers",
+  "order": 2,
+  "project_type": "freelance",
+  "banner": "/media/Ozzy_Banner.png",
+  "demo_type": "image",
+  "demo_image": "/media/IMG_4103 2.png",
+  "demo_youtube_url": "",
+  "description": "In collaboration with Ozzy’s Burgers, I developed event merchandise that highlights one of their most popular menu items: the lamb burger. The design features a custom illustration of a sheep integrated into the burger, paired with a personified version of the brand’s signature flame logo. By turning their existing branding into a new character, I created a unique visual identity for this specific apparel line",
+  "concept_illustrations": [
+    {
+      "image": "/media/Ozzy_2.png",
+      "col_span": 3
+    },
+    {
+      "image": "/media/Ozzy_1.png",
+      "col_span": 3
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

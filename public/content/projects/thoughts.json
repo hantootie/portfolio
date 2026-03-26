@@ -1,12 +1,18 @@
 {
   "title": "Thoughts",
+  "order": 2,
   "project_type": "animation",
   "banner": "/media/Thoughts_Banner.png",
   "demo_type": "youtube",
   "demo_image": "",
   "demo_youtube_url": "https://www.youtube.com/watch?v=7SpTnvJaVB4",
-  "description": "These are all my wonderful happy thoughts :P",
-  "concept_illustrations": [],
+  "description": "“Thoughts”\nThe second animation in the Woojoo series.\nThis film explores the heavy weight of anxiety as Woojoo turns to smoking, trying to find the \"pause\" button others seem to find so easily. A single cigarette only takes about two or three minutes to burn—a tiny fragment of the day—but when you are trapped in a cycle of overthinking, those minutes feel like an eternity.\nIn that brief, supposed moment of relaxation, the silence is actually loud with paranoia. It’s a suffocating sensation where, even in private, Woojoo feels the pressure of an invisible audience watching and judging every breath. It’s about how, when your mind is racing, even a three-minute break can become a marathon of mental struggle.",
+  "concept_illustrations": [
+    {
+      "image": "/media/Ahhhyhjiftyvhkbk.png",
+      "col_span": 1
+    }
+  ],
   "storyboard": [
     {
       "image": "/media/story thumb nail.PNG",

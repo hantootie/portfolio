@@ -4,6 +4,7 @@
   --font-rock-salt: "Rock Salt", cursive;
   --font-schoolbell: "Schoolbell", cursive;
   --tracking-1: 0.17em;
+  --color-red: #E0534C
 }
 
 @layer components {

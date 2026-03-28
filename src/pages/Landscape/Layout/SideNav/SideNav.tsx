@@ -4,10 +4,10 @@ import { useAboutChae } from '../../../../context/AboutChaeContext';
 import { useWorkDetail, slugify } from '../../../../context/WorkDetailContext';
 import FadeImage from '../../../../components/FadeImage/FadeImage';
 
-const NavButton: React.FC<{ onClick?: () => void; children: React.ReactNode }> = ({ onClick, children }) => (
+export const NavButton: React.FC<{ onClick?: () => void; className?: string; children: React.ReactNode }> = ({ onClick, className = '', children }) => (
     <button
         onClick={onClick}
-        className="hover:opacity-70 hover:-translate-y-0.25 transition-transform duration-200 cursor-pointer"
+        className={`hover:opacity-70 hover:-translate-y-0.25 transition-transform duration-200 cursor-pointer ${className}`}
     >
         {children}
     </button>

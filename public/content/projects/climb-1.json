@@ -8,6 +8,67 @@
   "demo_youtube_url": "https://youtu.be/6Yw7hPQc200",
   "description": "This is the original animatic for my short film, \"Climb.\" While the final animation evolved during production, this early vision focused much more deeply on the vulnerability of being overwhelmed and the importance of asking for help.\n\nThe baseline of the story explores the parallel stresses of creative work and physical challenges. It follows the main character as they struggle through the burnout of a demanding \"animation project,\" eventually heading to the climbing gym to clear their head—only to find that their \"climbing project\" is just as frustrating.\n\nIn this version, the narrative hits a point where the character feels completely stuck in both worlds, highlighting that suffocating feeling when a problem seems too big to solve alone. The core message is a conversation with a friend who reminds them that seeking advice is not something to be ashamed of. It’s a reminder that we don’t always have to be the sole problem-solvers; instead, we have to recognize the strength it takes to ask for help when we truly need it.",
   "concept_illustrations": [],
-  "storyboard": [],
+  "storyboard": [
+    {
+      "image": "/media/climb og story board1.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board2.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board3.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board4.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board5.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board6.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board7.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board8.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board9.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board10.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board11.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board12.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board13.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board14.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/climb og story board15.PNG",
+      "col_span": 1
+    }
+  ],
   "resume_pdf": ""
 }

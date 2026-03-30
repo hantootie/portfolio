@@ -40,7 +40,7 @@ const SideNav: React.FC = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <NavButton onClick={() => navigate('/work')}>Work .</NavButton>
+                    <NavButton onClick={() => navigate('/work')}>Work</NavButton>
                     {isWorkDetail && projectTitles.length > 0 && (
                         <div className="flex flex-col gap-3 xl:text-xl sm:text-sm items-center">
                             {projectTitles.map((title) => (

@@ -2,9 +2,9 @@
   "title": "Comic",
   "order": 5,
   "project_type": "illustration",
-  "banner": "",
+  "banner": "/media/Comic_Banner.png",
   "demo_type": "image",
-  "demo_image": "/media/Comic_Banner.png",
+  "demo_image": "",
   "demo_youtube_url": "",
   "description": "",
   "concept_illustrations": [

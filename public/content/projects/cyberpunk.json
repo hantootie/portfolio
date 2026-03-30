@@ -1,0 +1,22 @@
+{
+  "title": "Cyberpunk",
+  "order": 4,
+  "project_type": "illustration",
+  "banner": "/media/Cyberpunk_Banner.png",
+  "demo_type": "",
+  "demo_image": "",
+  "demo_youtube_url": "",
+  "description": "",
+  "concept_illustrations": [
+    {
+      "image": "/media/Cyberpunk.png",
+      "col_span": 3
+    },
+    {
+      "image": "/media/Cyberpunk 1.png",
+      "col_span": 3
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

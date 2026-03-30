@@ -1,0 +1,22 @@
+{
+  "title": "Character Design",
+  "order": 4,
+  "project_type": "illustration",
+  "banner": "",
+  "demo_type": "youtube",
+  "demo_image": "",
+  "demo_youtube_url": "https://youtu.be/dbEz3_VPX2M",
+  "description": "\"Survivor Concept: A girl forged by the apocalypse who is prepared to do anything to see the next sunrise. This illustration focuses on her resourceful, 'self survived' nature, anchored by the iconic image of her dragging a nail studded bat through the ruins of the old world.",
+  "concept_illustrations": [
+    {
+      "image": "/media/제목_없는_아트워크 162.png",
+      "col_span": 3
+    },
+    {
+      "image": "/media/제목_없는_아트워크 164.png",
+      "col_span": 2
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

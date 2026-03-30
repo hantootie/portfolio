@@ -1,0 +1,30 @@
+{
+  "title": "Invitation",
+  "order": 1,
+  "project_type": "design",
+  "banner": "/media/Invitation_Banner.png",
+  "demo_type": "",
+  "demo_image": "",
+  "demo_youtube_url": "",
+  "description": "",
+  "concept_illustrations": [
+    {
+      "image": "/media/제목_없는_아트워크 151.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 152.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 155.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 154.png",
+      "col_span": 1
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

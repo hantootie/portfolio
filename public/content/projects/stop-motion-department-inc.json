@@ -6,8 +6,13 @@
   "demo_type": "youtube",
   "demo_image": "",
   "demo_youtube_url": "https://youtu.be/lb5GMwBLeec",
-  "description": "",
-  "concept_illustrations": [],
+  "description": "Twenty years after walking away from his quest for rock'n'roll glory, a mysterious tunesmith emerges from his parents' basement with a power-pop masterpiece. Is the world still waiting for Harkness?\n\nStop Motion Department teamed up with director Maria Markina and Storyline Entertainment to create animated sequences and a main title animation for this full length documentary.",
+  "concept_illustrations": [
+    {
+      "image": "/media/harkness final.jpg",
+      "col_span": 3
+    }
+  ],
   "storyboard": [],
   "resume_pdf": ""
 }

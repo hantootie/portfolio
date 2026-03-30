@@ -1,0 +1,26 @@
+{
+  "title": "Original Illust",
+  "order": 1,
+  "project_type": "illustration",
+  "banner": "/media/Og_Illust_Banner.png",
+  "demo_type": "",
+  "demo_image": "",
+  "demo_youtube_url": "",
+  "description": "",
+  "concept_illustrations": [
+    {
+      "image": "/media/IMG_4511.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4509.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4508.PNG",
+      "col_span": 1
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

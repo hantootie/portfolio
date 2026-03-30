@@ -1,0 +1,30 @@
+{
+  "title": "Chalk Dust Club",
+  "order": 2,
+  "project_type": "design",
+  "banner": "/media/Climb_Shirt_Banner.png",
+  "demo_type": "image",
+  "demo_image": "/media/IMG_4538.PNG",
+  "demo_youtube_url": "",
+  "description": "I created a series of custom climbing shirts for friends within the community, designed as one of a kind tributes to their personal journeys. The front of each shirt features a stylized portrait in my signature drawing style, while the back showcases a custom illustration of a climb that holds significant meaning or represents a personal milestone for them. Each piece is a unique blend of character design and environmental storytelling, tailored to the individual climber.",
+  "concept_illustrations": [
+    {
+      "image": "/media/IMG_4531.PNG",
+      "col_span": 3
+    },
+    {
+      "image": "/media/IMG_4533.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4534.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4536.PNG",
+      "col_span": 1
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}

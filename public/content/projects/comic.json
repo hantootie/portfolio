@@ -1,0 +1,78 @@
+{
+  "title": "Comic",
+  "order": 5,
+  "project_type": "illustration",
+  "banner": "",
+  "demo_type": "",
+  "demo_image": "/media/Comic_Banner.png",
+  "demo_youtube_url": "",
+  "description": "",
+  "concept_illustrations": [
+    {
+      "image": "/media/IMG_4491.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4492.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4493.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4494.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4495.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4496.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4485.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4486.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4487.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4488.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4489.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/IMG_4490.PNG",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 156.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 157.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 158.png",
+      "col_span": 1
+    },
+    {
+      "image": "/media/제목_없는_아트워크 159.png",
+      "col_span": 1
+    }
+  ],
+  "storyboard": [],
+  "resume_pdf": ""
+}
